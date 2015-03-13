@@ -11,7 +11,7 @@ Seamlessly serve the static assets of your Flask app from Amazon S3.
 Maintainers
 -----------
 
-Flask-S3 is maintained by @e-dard and @eriktaubeneck.
+Flask-S3 -Bower is maintained by @ibrahim12
 
 Documentation
 -------------
