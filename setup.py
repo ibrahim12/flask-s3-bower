@@ -15,7 +15,7 @@ setup(
     author_email='irashid.com@gmail.com',
     description='Seamlessly serve the static files of your Flask app from Amazon S3 and also use bower for development',
     long_description=__doc__,
-    py_modules=['flask_s3_bower'],
+    packages=['flask_s3_bower',],
     zip_safe=False,
     include_package_data=True,
     platforms='any',
