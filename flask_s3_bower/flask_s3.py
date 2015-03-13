@@ -313,7 +313,7 @@ class FlaskS3Bower(object):
             app.jinja_env.globals['url_for'] = url_for
         elif app.config['USE_BOWER']:
             from flask_bower import Bower, bower_url_for
-            app = Bower(app)
+            Bower(app)
             app.jinja_env.globals['url_for'] = bower_url_for
 
         if app.config['S3_USE_CACHE_CONTROL'] and app.config.get('S3_CACHE_CONTROL'):
