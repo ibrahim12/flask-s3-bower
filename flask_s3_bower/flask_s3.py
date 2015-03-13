@@ -300,7 +300,8 @@ class FlaskS3Bower(object):
                     ('S3_USE_CACHE_CONTROL', False),
                     ('S3_HEADERS', {}),
                     ('S3_ONLY_MODIFIED', False),
-                    ('S3_URL_STYLE', 'host')]
+                    ('S3_URL_STYLE', 'host'),
+                    ('USE_BOWER', False)]
 
         for k, v in defaults:
             app.config.setdefault(k, v)
@@ -311,7 +312,7 @@ class FlaskS3Bower(object):
         if app.config['USE_S3']:
             app.jinja_env.globals['url_for'] = url_for
         elif app.config['USE_BOWER']:
-            from flask.ext.bower import Bower
+            from flask_bower import Bower, bower_url_for
             app = Bower(app)
             app.jinja_env.globals['url_for'] = bower_url_for
 
