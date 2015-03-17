@@ -8,8 +8,9 @@ templates.
 
 >> Flask-Bower allows you to server static files using bower, but you need to modify you template.
 
+Merging and modifying the functionality form both repository, 
 
-**Flask-S3-Bower** you don't have to modify the templates. Use defualt ``url_for`` for serving file from both s3, bower and default static folder. 
+In **Flask-S3-Bower** you don't have to modify the templates. Use defualt ``url_for`` for serving file from both s3, bower and default static folder. 
 
 .. _Amazon S3: http://aws.amazon.com/s3
 .. _Flask: http://flask.pocoo.org/

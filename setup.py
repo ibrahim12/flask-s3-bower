@@ -9,7 +9,7 @@ from setuptools import setup
 setup(
     name='Flask-S3-Bower',
     version='0.2',
-    url='https://github.com/ibrahim12/Flask-S3-Bower-bower',
+    url='https://github.com/ibrahim12/flask-s3-bower',
     license='GNU',
     author='Ibrahim Rashid',
     author_email='irashid.com@gmail.com',
@@ -23,7 +23,7 @@ setup(
         'Flask',
         'Boto>=2.5.2'
     ],
-    download_url = 'https://github.com/ibrahim12/Flask-S3-Bower-bower/tarball/0.2',
+    download_url = 'https://github.com/ibrahim12/Flask-S3-Bower/tarball/0.3',
     tests_require=['nose', 'mock'],
     classifiers=[
         'Environment :: Web Environment',

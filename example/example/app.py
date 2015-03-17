@@ -1,12 +1,13 @@
 
 from flask import Flask, render_template_string
-from flask_s3 import FlaskS3, create_all
+from flask_s3_bower import FlaskS3Bower, create_all
+
 
 app = Flask(__name__)
 app.config['S3_BUCKET_NAME'] = 'mybucketname'
 app.config['USE_S3_DEBUG'] = True
 
-s3 = FlaskS3(app)
+s3bower = FlaskS3Bower(app)
 
 @app.route('/')
 def index():
