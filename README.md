@@ -12,13 +12,14 @@ USE_BOWER = True
 
 ```
 
->> Flask-S3 allows you to easily serve all your `Flask`_ application's
+- **Flask-S3** allows you to easily serve all your `Flask`_ application's
 static assets from `Amazon S3`_, without having to modify your
 templates.
 
->> Flask-Bower allows you to server static files using bower, but you need to modify you template.
 
-Merging and modifying the functionality form both repository, 
+-  **Flask-Bower** allows you to server static files using bower, but you need to modify you template.
+
+Merging and modifying the functionality from both repository, 
 
 In **Flask-S3-Bower** you don't have to modify the templates. Use defualt ``url_for`` for serving file from both s3, bower and default static folder. 
 
