@@ -80,6 +80,13 @@ def _bp_static_url(blueprint):
 def _gather_files(app, hidden):
     """ Gets all files in static folders and returns in dict."""
     dirs = [(unicode(app.static_folder), app.static_url_path)]
+
+    if app.config.get('USE_BOWER', False):
+        bower_root = app.config.get('BOWER_COMPONENTS_ROOT', 'bower_components')
+        root = os.path.join(app.static_folder, bower_root )
+        if not root.startswith('static'):
+            dirs.extend([(unicode(root), '/bower')])
+
     if hasattr(app, 'blueprints'):
         blueprints = app.blueprints.values()
         bp_details = lambda x: (x.static_folder, _bp_static_url(x))
