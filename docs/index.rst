@@ -273,4 +273,3 @@ Bower Object
 
     .. automethod:: init_app
     .. autofunction:: bower_url_for
-
