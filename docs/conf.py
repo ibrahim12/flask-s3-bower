@@ -185,8 +185,8 @@ latex_elements = {
 # Grouping the document tree into LaTeX files. List of tuples
 # (source start file, target name, title, author, documentclass [howto/manual]).
 latex_documents = [
-  ('index', 'flask-s3.tex', u'flask-s3 Documentation',
-   u'Edward Robinson', 'manual'),
+  ('index', 'flask-s3-bower.tex', u'flask-s3-bower Documentation',
+   u'Ibrahim Rashid', 'manual'),
 ]
 
 # The name of an image file (relative to this directory) to place at the top of
@@ -215,8 +215,8 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    ('index', 'flask-s3', u'flask-s3 Documentation',
-     [u'Edward Robinson'], 1)
+    ('index', 'flask-s3-bower', u'flask-s3-bower Documentation',
+     [u'Ibrahim Rashid'], 1)
 ]
 
 # If true, show URL addresses after external links.
@@ -229,8 +229,8 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-  ('index', 'flask-s3', u'flask-s3 Documentation',
-   u'Edward Robinson', 'flask-s3', 'Flask-S3 allows you to server your static assets from Amazon S3.',
+  ('index', 'flask-s3-bower', u'flask-s3-bower Documentation',
+   u'Ibrahim Rashid', 'Flask S3 Bower', 'Seamlessly serve the static assets of your Flask app from Amazon S3 and Support for Bower without modifying your template.',
    'Miscellaneous'),
 ]
 
@@ -246,7 +246,7 @@ texinfo_documents = [
 sys.path.append(os.path.abspath('_themes'))
 html_theme_path = ['_themes']
 html_theme = 'flask_small'
-html_theme_options = dict(github_fork='e-dard/flask-s3', 
+html_theme_options = dict(github_fork='ibrahim12/flask-s3-bower', 
                           index_logo=False)
 
 
