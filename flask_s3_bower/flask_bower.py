@@ -36,7 +36,7 @@ def bower_url_for(endpoint, filename=None, **values):
     if filename:
         default_url_for_args['filename'] = filename
 
-    if endpoint == 'static' or endpoint.endswith('.static'):
+    if filename and endpoint == 'static' or endpoint.endswith('.static'):
 
         root = current_app.config['BOWER_COMPONENTS_ROOT']
         bower_data = None
