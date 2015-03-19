@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 #
-# flask-s3 documentation build configuration file, created by
+# flask-s3-bower documentation build configuration file, created by
 # sphinx-quickstart on Sat Sep  8 13:10:46 2012.
 #
 # This file is execfile()d with the current directory set to its containing dir.
@@ -40,8 +40,8 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = u'flask-S3'
-copyright = u'2012, Edward Robinson'
+project = u'flask-S3-bower'
+copyright = u'2015, Ibrahim Rashid'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
