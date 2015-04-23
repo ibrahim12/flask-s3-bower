@@ -48,10 +48,10 @@ def bower_url_for(endpoint, filename=None, **values):
 
     # Remove duplicate `/bower` path string if given in components root and file path
     root = current_app.config['BOWER_COMPONENTS_ROOT']
-    filename = fix_overlapped_path(root, filename)
 
     default_url_for_args = values.copy()
     if filename:
+        filename = fix_overlapped_path(root, filename)
         default_url_for_args['filename'] = filename
 
     if filename and endpoint == 'static' or endpoint.endswith('.static'):
