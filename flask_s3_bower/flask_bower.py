@@ -19,6 +19,20 @@ def serve(component, filename):
     return send_file('/'.join([root, component, filename]))
 
 
+def fix_overlapped_path(bower_root, filename):
+    '''
+    Checks for duplicated 'bower' string in `bower_root ends` and `filename` begin,
+    If exists, it removes duplicate from `filename` and returns the modified `filename`
+    :param bower_root:
+    :param filename:
+    :return filename:
+    '''
+    if filename.startswith('bower/') and bower_root.endswith('/bower'):
+        filename = '/'.join(filename.split('/')[1:])
+
+    return filename
+
+
 def bower_url_for(endpoint, filename=None, **values):
     '''
     Endpoint is default flask url_for endpoint, static or route
@@ -32,13 +46,16 @@ def bower_url_for(endpoint, filename=None, **values):
     :return:
     '''
 
+    # Remove duplicate `/bower` path string if given in components root and file path
+    root = current_app.config['BOWER_COMPONENTS_ROOT']
+    filename = fix_overlapped_path(root, filename)
+
     default_url_for_args = values.copy()
     if filename:
         default_url_for_args['filename'] = filename
 
     if filename and endpoint == 'static' or endpoint.endswith('.static'):
 
-        root = current_app.config['BOWER_COMPONENTS_ROOT']
         bower_data = None
         package_data = None
 
