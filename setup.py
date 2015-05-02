@@ -8,7 +8,7 @@ from setuptools import setup
 
 setup(
     name='Flask-S3-Bower',
-    version='0.6',
+    version='0.7',
     url='https://github.com/ibrahim12/flask-s3-bower',
     license='GNU',
     author='Ibrahim Rashid',
@@ -23,7 +23,7 @@ setup(
         'Flask',
         'Boto>=2.5.2'
     ],
-    download_url = 'https://github.com/ibrahim12/Flask-S3-Bower/tarball/0.6',
+    download_url = 'https://github.com/ibrahim12/Flask-S3-Bower/tarball/0.7',
     tests_require=['nose', 'mock'],
     keywords=['flask_s3_bower', 'flask bower', 'flask s3', 'serve static file flask s3 bower'],
     classifiers=[
